@@ -8,7 +8,17 @@
         <Title>PokedexApi.NET</Title>
         <Description>Una libreria wrapper che permette di accedere a tutte le informazioni dei pokemon, le loro abilità e le loro mosse</Description>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>0.1.0</Version>
+        <Version>0.1.2</Version>
+        <PackageProjectUrl>https://github.com/criss02-cs/PokedexApi.NET</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/criss02-cs/PokedexApi.NET</RepositoryUrl>
     </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <None Include="..\LICENSE" Pack="true" PackagePath="" />
+    </ItemGroup>
 
 </Project>
