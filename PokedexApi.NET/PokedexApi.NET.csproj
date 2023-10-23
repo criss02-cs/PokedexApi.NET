@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Authors>crissss02cs</Authors>
+        <Title>PokedexApi.NET</Title>
+        <Description>Una libreria wrapper che permette di accedere a tutte le informazioni dei pokemon, le loro abilità e le loro mosse</Description>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>0.1.0</Version>
+    </PropertyGroup>
+
+</Project>

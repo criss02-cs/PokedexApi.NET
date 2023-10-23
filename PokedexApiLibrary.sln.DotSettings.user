@@ -1,0 +1,23 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2c858652_002Dbd5e_002D4b74_002D9c8e_002Dffe5a7eac852/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestPokemonList" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::C33B2AB7-76E1-45E9-999A-0579EA44E9A6::net6.0::Test.Tests.TestPokemonList&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C33B2AB7-76E1-45E9-999A-0579EA44E9A6::net6.0::Test.Tests.TestAbility&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C33B2AB7-76E1-45E9-999A-0579EA44E9A6::net6.0::Test.Tests.TestMove&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=333f8e01_002Db2da_002D4f67_002Dab75_002D55dca5de88c0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestTypeEqual #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::C33B2AB7-76E1-45E9-999A-0579EA44E9A6::net6.0::Test.Tests.TestTypeEqual&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C33B2AB7-76E1-45E9-999A-0579EA44E9A6::net6.0::Test.Tests.TestPokemonList&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C33B2AB7-76E1-45E9-999A-0579EA44E9A6::net6.0::Test.Tests.TestPokemonResource&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C33B2AB7-76E1-45E9-999A-0579EA44E9A6::net6.0::Test.Tests.TestMove&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8136efcc_002D308c_002D4862_002Db95f_002D4740625ac74d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestTypeEqual" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::C33B2AB7-76E1-45E9-999A-0579EA44E9A6::net6.0::Test.Tests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Pokedex/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Statistiche/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
