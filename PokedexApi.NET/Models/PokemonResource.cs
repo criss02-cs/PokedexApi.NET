@@ -10,10 +10,11 @@ public class PokemonResource : Resource
     public int Weight { get; set; }
     public string? PokedexDescription { get; set; }
     [JsonPropertyName("stats")]
-    public Statistiche Statistiche { get; set; }
-    public List<AbilitaPokemon> Abilita { get; set; }
-    public List<MossaPokemon> Moves { get; set; }
-    public List<string> Types { get; set; }
+    public Statistiche? Statistiche { get; set; }
+    public List<AbilitaPokemon>? Abilita { get; set; }
+    public List<MossaPokemon>? Moves { get; set; }
+    public List<string>? Types { get; set; }
+    public string? ArtworkImage { get; set; }
 }
 
 public class MossaPokemon

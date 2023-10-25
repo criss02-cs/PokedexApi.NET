@@ -8,5 +8,6 @@ public class PokemonList : Resource
     public int PokedexId { get; set; }
     public string? Categoria { get; set; }
     [JsonConverter(typeof(TypeListConverter))]
-    public List<Type> Types { get; set; }
+    public List<Type>? Types { get; set; }
+    public string? ArtworkImage { get; set; }
 }

@@ -20,24 +20,18 @@ public class PokeClient : IDisposable
     {
         return await _pokemonService.GetResourceByName(name);
     }
-
     public async Task<List<Ability>?> GetAbilityList(ResourceListRequest? request = null)
     {
         return await _abilityService.GetResourceList(request);
     }
-
     public async Task<Ability?> GetAbilityByName(string name)
     {
         return await _abilityService.GetResourceByName(name);
     }
-
     public async Task<List<Move>?> GetMovesList(MoveListRequest? request = null)
     {
         return await _moveService.GetResourceList(request);
     }
-    
-    
-    
     public async Task<Move?> GetMoveByName(string name)
     {
         return await _moveService.GetResourceByName(name);
