@@ -1,4 +1,5 @@
 using PokedexApi.NET.Models;
+using PokedexApi.NET.Utils;
 
 namespace PokedexApi.NET.Clients;
 

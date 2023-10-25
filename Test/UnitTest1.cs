@@ -1,3 +1,4 @@
+using PokedexApi.NET.Utils;
 using Type = PokedexApi.NET.Models.Type;
 
 namespace Test;

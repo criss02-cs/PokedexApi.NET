@@ -10,13 +10,10 @@ internal class StringToTypeConverter : JsonConverter<Models.Type>
         if (reader.TokenType != JsonTokenType.String)
             throw new Exception("Impossibile convertire la stringa in un oggetto Type.");
         var jsonString = reader.GetString();
-        if (jsonString != null)
-        {
-            var type = new Models.Type(jsonString);
-            return type;
-        }
+        if (jsonString == null) return null;
+        var type = new Models.Type(jsonString);
+        return type;
 
-        return null;
     }
 
     public override void Write(Utf8JsonWriter writer, Models.Type value, JsonSerializerOptions options)
@@ -49,8 +46,18 @@ internal class TypeListConverter : JsonConverter<List<Models.Type>>
                 }
                 case JsonTokenType.EndArray:
                     return typeList;
+                case JsonTokenType.None:
+                case JsonTokenType.StartObject:
+                case JsonTokenType.EndObject:
+                case JsonTokenType.StartArray:
+                case JsonTokenType.PropertyName:
+                case JsonTokenType.Comment:
+                case JsonTokenType.Number:
+                case JsonTokenType.True:
+                case JsonTokenType.False:
+                case JsonTokenType.Null:
                 default:
-                    throw new ArgumentOutOfRangeException();
+                    throw new NotSupportedException();
             }
         }
 

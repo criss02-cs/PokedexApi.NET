@@ -12,9 +12,9 @@ internal class MoveCategoryConverter : JsonConverter<MoveCategory>
         if (reader.TokenType != JsonTokenType.String)
             throw new Exception("Il valore deve essere una stringa");
         var value = reader.GetString();
-        if (value is null)
-            throw new Exception("Il valore non può essere nullo");
-        return value switch
+        return value is null
+            ? throw new Exception("Il valore non può essere nullo")
+            : value switch
         {
             "Special" => MoveCategory.Special,
             "Status" => MoveCategory.Status,

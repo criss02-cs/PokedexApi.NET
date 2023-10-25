@@ -1,7 +1,6 @@
 using System.Text.Json.Serialization;
-using PokedexApi.NET.Models;
 
-namespace PokedexApi.NET;
+namespace PokedexApi.NET.Utils;
 public class ResourceListRequest
 {
     [JsonPropertyName("offset")]
