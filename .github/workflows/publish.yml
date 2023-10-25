@@ -19,7 +19,6 @@ env:
 defaults:
   run:
     shell: pwsh
-
 jobs:
     build:
       runs-on: ubuntu-latest    
@@ -73,6 +72,25 @@ jobs:
             foreach($file in (Get-ChildItem "${{ env.NuGetDirectory }}" -Recurse -Include *.nupkg)) {
               dotnet nuget push $file --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
             }
+        - name: Build Changelog
+          uses: mikepenz/release-changelog-builder-action@v3
+          with:
+            configurationJson: |
+              {
+                "template": "#{{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n#{{UNCATEGORIZED}}\n</details>",
+                "categories": [
+                  {
+                      "title": "## 💬 Other",
+                      "labels": ["other"]
+                  },
+                  {
+                      "title": "## 📦 Dependencies",
+                      "labels": ["dependencies"]
+                  }
+                ]
+              }
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # Create release
         - name: Create release
           if: needs.build.outputs.CommitsSinceVersionSource > 0 # Only release if there has been a commit/version change
@@ -82,3 +100,4 @@ jobs:
             name: Release ${{ needs.build.outputs.Version }}
             artifacts: "nuget/*"
             token: ${{ secrets.TOKEN }}
+            body: ${{steps.github_release.outputs.changelog}}
