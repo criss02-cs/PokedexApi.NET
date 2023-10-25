@@ -19,13 +19,13 @@ internal class HttpClientManager : IDisposable
     public static HttpClientManager Instance =>
         _instance ??= new HttpClientManager("https://crissscode-pokedex-api.cyclic.app");
 
-    public async Task<T?> SendGetRequest<T>(string endpoint) where T : Resource
+    public async Task<T?> SendGetRequest<T>(string endpoint)
     {
         var response = await _client.GetFromJsonAsync<T>(endpoint, _options);
         return response;
     }
 
-    public async Task<T?> SendPostRequest<T>(string endpoint, object data) where T : Resource
+    public async Task<T?> SendPostRequest<T>(string endpoint, object data)
     {
         var response = await _client.PostAsJsonAsync(endpoint, data, _options);
         var result = await response.Content.ReadFromJsonAsync<T>(_options);
