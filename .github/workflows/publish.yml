@@ -80,5 +80,5 @@ jobs:
           with:
             tag: ${{ needs.build.outputs.Version }}
             name: Release ${{ needs.build.outputs.Version }}
-            artifacts: "nuget"
+            artifacts: "nuget/*"
             token: ${{ secrets.TOKEN }}
