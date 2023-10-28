@@ -72,21 +72,6 @@ jobs:
         - name: Build Changelog
           id: github_release
           uses: mikepenz/release-changelog-builder-action@v3
-          with:
-            configurationJson: |
-              {
-                "template": "#{{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n#{{UNCATEGORIZED}}\n</details>",
-                "categories": [
-                  {
-                      "title": "## 💬 Other",
-                      "labels": ["other"]
-                  },
-                  {
-                      "title": "## 📦 Dependencies",
-                      "labels": ["dependencies"]
-                  }
-                ]
-              }
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # Create release
@@ -95,7 +80,7 @@ jobs:
           uses: ncipollo/release-action@v1
           with:
             tag: ${{ needs.build.outputs.Version }}
-            name: Release ${{ needs.build.outputs.Version }}
+            name: v${{ needs.build.outputs.Version }}
             artifacts: "nuget/*"
             token: ${{ secrets.TOKEN }}
             body: ${{steps.github_release.outputs.changelog}}

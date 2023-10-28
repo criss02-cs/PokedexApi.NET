@@ -1,5 +1,6 @@
 using PokedexApi.NET.Models;
 using PokedexApi.NET.Utils;
+using PokedexApi.NET.Utils.Factory;
 
 namespace PokedexApi.NET.Clients;
 
@@ -8,13 +9,7 @@ internal class PokemonService : IResourceService<PokemonList, PokemonResource>
     private readonly HttpClientManager _client = HttpClientManager.Instance;
     public async Task<List<PokemonList>?> GetResourceList(ResourceListRequest? request = null)
     {
-        request ??= new TypesListRequest
-        {
-            Limit = 100,
-            Offset = 0,
-            Name = string.Empty,
-            Types = new List<string>()
-        };
+        request ??= ResourceListFactory.Create(ResourceListType.Types);
         if (request is not TypesListRequest)
             throw new ArgumentException("The request has to be a TypesListRequest");
         var response = await _client.SendPostRequest<List<PokemonList>>("/pokemon/getPokemonList", request);
