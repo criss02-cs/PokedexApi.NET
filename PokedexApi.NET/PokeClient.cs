@@ -20,6 +20,11 @@ public class PokeClient : IDisposable
     {
         return await _pokemonService.GetResourceByName(name);
     }
+
+    public async Task<PokemonResource?> GetPokemonByPokedexId(int pokedexId)
+    {
+        return await _pokemonService.GetByPokedexId(pokedexId);
+    }
     public async Task<List<Ability>?> GetAbilityList(ResourceListRequest? request = null)
     {
         return await _abilityService.GetResourceList(request);

@@ -23,4 +23,12 @@ internal class PokemonService : IResourceService<PokemonList, PokemonResource>
         var response = await _client.SendGetRequest<PokemonResource>($"/pokemon/getByName/{name}");
         return response;
     }
+
+    public async Task<PokemonResource?> GetByPokedexId(int pokedexId)
+    {
+        if (pokedexId <= 0)
+            throw new ArgumentException("The pokedex id cannot be 0 or less");
+        var response = await _client.SendGetRequest<PokemonResource>($"/pokemon/getByPokedexId/{pokedexId}");
+        return response;
+    }
 }
