@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using PokedexApi.NET.Utils;
 
 namespace PokedexApi.NET.Models;
 
@@ -13,7 +14,8 @@ public class PokemonResource : Resource
     public Statistiche? Statistiche { get; set; }
     public List<AbilitaPokemon>? Abilita { get; set; }
     public List<MossaPokemon>? Moves { get; set; }
-    public List<string>? Types { get; set; }
+    [JsonConverter(typeof(TypeListConverter))]
+    public List<Type>? Types { get; set; }
     public string? ArtworkImage { get; set; }
 }
 
