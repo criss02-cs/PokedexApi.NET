@@ -24,10 +24,13 @@ public class MossaPokemon
     public string? MoveId { get; set; }
     public string? Method { get; set; }
     public int Level { get; set; }
+    public string? MoveName { get; set; }
+    public string? MoveType { get; set; }
 }
 
 public class AbilitaPokemon
 {
     public string? AbilityId { get; set; }
+    public string? AbilityName { get; set; }
     public bool IsHidden { get; set; }
 }
