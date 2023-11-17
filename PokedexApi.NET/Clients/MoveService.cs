@@ -21,4 +21,14 @@ internal class MoveService : IResourceService<Move, Move>
         var response = await _client.SendGetRequest<Move>($"/moves/getByName/{name}");
         return response;
     }
+
+    public async Task<List<Move>?> GetListById(List<string> ids)
+    {
+        if (!ids.Any())
+        {
+            throw new ArgumentException("La lista degli id non può essere vuota");
+        }
+        var response = await _client.SendPostRequest<List<Move>>("/moves/getMovesByIdList", ids);
+        return response;
+    }
 }

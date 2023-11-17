@@ -19,4 +19,14 @@ internal class AbilityService : IResourceService<Ability, Ability>
         var response = await _client.SendGetRequest<Ability>($"abilita/getByName/{name}");
         return response;
     }
+
+    public async Task<List<Ability>?> GetListById(List<string> ids)
+    {
+        if (!ids.Any())
+        {
+            throw new ArgumentException("La lista degli id non può essere vuota");
+        }
+        var response = await _client.SendPostRequest<List<Ability>>("/abilita/getAbilityListById", ids);
+        return response;
+    }
 }

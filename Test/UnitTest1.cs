@@ -79,4 +79,16 @@ public class Tests
         var list = await client.GetMovesList(filter);
         Assert.IsTrue(list.Count < 50);
     }
+
+    [Test]
+    public async Task TestListById()
+    {
+        using var client = new PokeClient();
+        var magikarp= await client.GetPokemonByName("magikarp");
+        var result = await client.GetMoveListById(magikarp.Moves.Select(x => x.MoveId).ToList());
+        Assert.IsTrue(result.Count == 5);
+        var rattata = await client.GetPokemonByName("rattata");
+        var result2 = await client.GetAbilityListById(rattata.Abilita.Select(x => x.AbilityId).ToList());
+        Assert.IsTrue(result2.Count == 3);
+    }
 }

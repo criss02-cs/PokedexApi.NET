@@ -12,6 +12,7 @@
     &lt;TestId&gt;NUnit3x::C33B2AB7-76E1-45E9-999A-0579EA44E9A6::net6.0::Test.Tests.TestPokemonList&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::C33B2AB7-76E1-45E9-999A-0579EA44E9A6::net6.0::Test.Tests.TestPokemonResource&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::C33B2AB7-76E1-45E9-999A-0579EA44E9A6::net6.0::Test.Tests.TestMove&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C33B2AB7-76E1-45E9-999A-0579EA44E9A6::net6.0::Test.Tests.TestListById&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8136efcc_002D308c_002D4862_002Db95f_002D4740625ac74d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestTypeEqual" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
