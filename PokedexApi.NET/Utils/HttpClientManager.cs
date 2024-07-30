@@ -17,7 +17,7 @@ internal class HttpClientManager : IDisposable
     }
 
     public static HttpClientManager Instance =>
-        _instance ??= new HttpClientManager("https://crissscode-pokedex-api.cyclic.app");
+        _instance ??= new HttpClientManager("https://pokedex.cristianoaloigi.it");
 
     public async Task<T?> SendGetRequest<T>(string endpoint)
     {
