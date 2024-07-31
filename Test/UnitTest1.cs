@@ -65,7 +65,7 @@ public class Tests
     {
         using var client = new PokeClient();
         var result = await client.GetMoveByName("abbagliante");
-        Assert.IsTrue(result.Name == "Abbagliante");
+        Assert.IsTrue(result?.Name == "Abbagliante");
         var filter = new MoveListRequest
         {
             Limit = 50,
